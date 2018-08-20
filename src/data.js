@@ -6,11 +6,15 @@ export const muscles = {
     {
       headerName: "Muscle",
       field: "name",
+      cellEditorFramework: ListEditor,
+      cellRendererFramework: ListRenderer,
       maxWidth: 150
     },
     {
       headerName: "Muscle Group",
       field: "group",
+      cellEditorFramework: ListEditor,
+      cellRendererFramework: ListRenderer,
       maxWidth: 100
     },
     {
@@ -51,8 +55,8 @@ export const muscles = {
   ],
   items: [
     {
-      name: "abductor digiti minimi", 
-      group: "foot",
+      name: ["abductor digiti minimi"], 
+      group: ["foot"],
       origin: [
         "medial tubercles of tuberosity of calcaneus",
         "lateral tubercles of tuberosity of calcaneus",
@@ -75,8 +79,8 @@ export const muscles = {
       ]
     },
     {
-      name: "abductur hallucis", 
-      group: "foot",
+      name: ["abductur hallucis"], 
+      group: ["foot"],
       origin: [
         "medial tubercles of tuberosity of calcaneus",
         "lateral tubercles of tuberosity of calcaneus",
@@ -99,8 +103,8 @@ export const muscles = {
       ]
     },
     {
-      name: "adductor brevis", 
-      group: "medial thigh",
+      name: ["adductor brevis"], 
+      group: ["medial thigh"],
       origin: [
         "body pubic ramus",
         "inferior pubic ramus",
@@ -123,8 +127,8 @@ export const muscles = {
       ]
     },
     {
-      name: "adductor hallucis", 
-      group: "foot",
+      name: ["adductor hallucis"], 
+      group: ["foot"],
       origin: [
         "oblique head: bases of 2nd through 4th metatarsals",
         "transverse head: ligaments of metatarsophalangeal joints of digits 3–5"
@@ -148,8 +152,8 @@ export const muscles = {
       ]
     },
     {
-      name: "adductor longus", 
-      group: "medial thigh",
+      name: ["adductor longus"], 
+      group: ["medial thigh"],
       origin: [
         "body of pubis inferior to pubic crest",
       ],
@@ -168,288 +172,173 @@ export const muscles = {
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["adductor magnus"], 
+      group: ["medial thigh"],
       origin: [
+        "inferior pubic ramus",
+        "ramus of ischium",
+        "hamstring part: ischial tuberosity"
       ],
       insertion: [
+        "gluteal tuberosity",
+        "linea aspera",
+        "medial supracondylar line"
       ],
       innervation: [
+        "adductor part: obturator nerve",
+        "hamstring part: sciatic nerve (tibial division)"
       ],
       bloodSupply: [
+        "femoral artery",
+        "profunda femoris",
+        "obturator arteries"
       ],
       actions: [
+        "adductor part: adducts thigh",
+        "adductor part: flexes thigh",
+        "hamstring part: extends thigh",
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["articularis genus"], 
+      group: ["anterior thigh"],
       origin: [
+        "distal femur on anterior surface"
       ],
       insertion: [
+        "suprapatellar bursa"
       ],
       innervation: [
+        "femoral nerve"
       ],
       bloodSupply: [
+        "femoral artery"
       ],
       actions: [
+        "pulls suprapatellar bursa superiorly with extension of knee"
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["biceps femoris"], 
+      group: ["posterior thigh"],
       origin: [
+        "long head: ischial tuberosity",
+        "short head: linea aspera of femur",
+        "short head: lateral supracondylar line of femur"
       ],
       insertion: [
+        "lateral side of head of fibula"
       ],
       innervation: [
+        "long head: sciatic nerve (tibial division) (L5–S2)",
+        "short head: sciatic nerve (common fibular division)"
       ],
       bloodSupply: [
+        "perforating branches of profunda femoris", 
+        "inferior gluteal artery",
+        "medial circumflex femoral artery"
       ],
       actions: [
+        "flexes leg",
+        "laterally rotates leg", 
+        "extends thigh at hip"
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["dorsal interossei (four muscles)"], 
+      group: ["foot"],
       origin: [
+        "adjacent sides of 1st through 5th metatarsals"
       ],
       insertion: [
+        "1st: medial side of proximal phalanx of 2nd digit",
+        "2nd through 4th: lateral sides of digits 2–4"
       ],
       innervation: [
+        "lateral plantar nerve"
       ],
       bloodSupply: [
+        "arcuate artery", 
+        "dorsal metatarsal artery",
+        "plantar metatarsal arteries"
       ],
       actions: [
+        "abduct 2nd through 4th digits of foot", 
+        "flex metatarsophalangeal joints",
+        "extend phalangeal bones"
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["extensor digitorum brevis and extensor hallucis brevis"], 
+      group: ["foot"],
       origin: [
+        "superolateral surface of calcaneus",
+        "lateral talocalcaneal ligament", 
+        "deep surface of inferior extensor retinaculum"
       ],
       insertion: [
+        "first tendon into dorsal surface of base of proximal phalanx of great toe",
+        "other three tendons into lateral sides of tendons of extensor digitorum longus to digits 2–4"
       ],
       innervation: [
+        "deep fibular nerve"
       ],
       bloodSupply: [
+        "dorsalis pedis artery", 
+        "lateral tarsal artery", 
+        "arcuate artery",
+        "fibular artery"
       ],
       actions: [
+        "aids extensor digitorum longus in extending of 4 medial digits at metatarsophalangeal interphalangeal joints",
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["extensor digitorum longus"], 
+      group: ["anterior leg"],
       origin: [
+        "lateral condyle of tibia", 
+        "proximal 3/4 of anterior surface of interosseous membrane",
+        "fibula"
       ],
       insertion: [
+        "middle and distal phalangeal bones of lateral four digits"
       ],
       innervation: [
+        "deep fibular nerve"
       ],
       bloodSupply: [
+        "anterior tibial artery"
       ],
       actions: [
+        "extends lateral four digits",
+        "dorsiflexes foot at ankle"
       ]
     },
     {
-      name: "", 
-      group: "",
+      name: ["extensor hallucis longus"], 
+      group: ["anterior leg"],
       origin: [
+        "middle part of anterior surface of fibula",
+        "interosseous membrane"
       ],
       insertion: [
+        "dorsal aspect of base of distal phalanx of great toe"
       ],
       innervation: [
+        "deep fibular nerve"
       ],
       bloodSupply: [
+        "anterior tibial artery"
       ],
       actions: [
+        "extends great toe", 
+        "dorsiflexes foot at ankle"
       ]
     },
     {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
-      origin: [
-      ],
-      insertion: [
-      ],
-      innervation: [
-      ],
-      bloodSupply: [
-      ],
-      actions: [
-      ]
-    },
-    {
-      name: "", 
-      group: "",
+      name: [""], 
+      group: [""],
       origin: [
       ],
       insertion: [

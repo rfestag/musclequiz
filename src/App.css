@@ -28,6 +28,7 @@
 }
 .ag-cell {
   white-space: normal !important;
+  line-height: 18px !important;
 }
 .cell-wrap-text {
   white-space: normal !important;

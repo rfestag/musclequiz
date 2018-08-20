@@ -90,7 +90,7 @@ export default class ListEditor extends Component {
         tabIndex={1} // important - without this the keypresses wont be caught
         style={{width: '500px'}}
       >
-        <form onSubmit={this.handleSubmit} style={{padding: '5px', paddingRight: '9px'}}>
+        <form onSubmit={this.handleSubmit} style={{padding: '5px'}}>
           {this.state.items.map((item, idx) => (
             <div key={idx}>
               <input
