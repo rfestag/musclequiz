@@ -154,11 +154,15 @@ class App extends Component {
     return (
       <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}>
         <Form inline>
-          <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px', paddingRight: 0}}>
-            <div style={{display: 'block', width: '200px'}}>
-              <Select options={this.state.types} value={this.state.type} onChange={this.setType}/>
-            </div>
-          </FormGroup>
+          { false && 
+            (
+              <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px', paddingRight: 0}}>
+                <div style={{display: 'block', width: '200px'}}>
+                  <Select options={this.state.types} value={this.state.type} onChange={this.setType}/>
+                </div>
+              </FormGroup>
+            )
+          }
           { this.state.type.value === 'columns' && 
             (
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px'}}>
