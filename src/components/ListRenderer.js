@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { UncontrolledTooltip } from 'reactstrap';
 import _ from 'lodash';
 
 const answerStyle = (answer) => {
