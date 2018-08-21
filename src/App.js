@@ -108,7 +108,7 @@ class App extends Component {
       return
     }
     //Do action
-    rowData = _.shuffle(rowData);
+    //rowData = _.shuffle(rowData);
     this.setState({ rowData, columnDefs, inQuiz: true })
   }
   resetHeights(params) {
