@@ -108,6 +108,7 @@ class App extends Component {
       return
     }
     //Do action
+    rowData = _.shuffle(rowData);
     this.setState({ rowData, columnDefs, inQuiz: true })
   }
   resetHeights(params) {
@@ -151,7 +152,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}>
         <Form inline>
           <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px', paddingRight: 0}}>
             <div style={{display: 'block', width: '200px'}}>
@@ -172,10 +173,9 @@ class App extends Component {
         </Form>
         <div
           className="ag-theme-balham"
-          style={{width: '100%' }}
+          style={{width: '100%', flex: 1 }}
 	      >
           <AgGridReact
-            gridAutoHeight={true}
             onGridReady={this.resetHeights}
             onCellValueChanged={this.resetHeights}
             onNewColumnsLoaded={this.resetHeights}
