@@ -34,7 +34,7 @@ const normalize = (items) => {
   })
 }
 const createFuzzySet = (values) => {
-  return new FuzzySet(values, false)
+  return new FuzzySet(values, true)
   /*return values.reduce((set, v) => {
     set.add(v);
     return set;
