@@ -18,6 +18,27 @@ export const muscles = {
       maxWidth: 100
     },
     {
+      headerName: "Innervation",
+      field: "innervation",
+      cellEditorFramework: ListEditor,
+      cellRendererFramework: ListRenderer,
+      maxWidth: 350
+    },
+    {
+      headerName: "Main Actions",
+      field: "actions",
+      cellEditorFramework: ListEditor,
+      cellRendererFramework: ListRenderer,
+      maxWidth: 350
+    },
+    {
+      headerName: "Blood Supply",
+      field: "bloodSupply",
+      cellEditorFramework: ListEditor,
+      cellRendererFramework: ListRenderer,
+      maxWidth: 350
+    },
+    {
       headerName: "Proximal Attachment (Origin)",
       field: "origin",
       cellEditorFramework: ListEditor,
@@ -31,27 +52,6 @@ export const muscles = {
       cellRendererFramework: ListRenderer,
       maxWidth: 350
     },
-    {
-      headerName: "Innervation",
-      field: "innervation",
-      cellEditorFramework: ListEditor,
-      cellRendererFramework: ListRenderer,
-      maxWidth: 350
-    },
-    {
-      headerName: "Blood Supply",
-      field: "bloodSupply",
-      cellEditorFramework: ListEditor,
-      cellRendererFramework: ListRenderer,
-      maxWidth: 350
-    },
-    {
-      headerName: "Main Actions",
-      field: "actions",
-      cellEditorFramework: ListEditor,
-      cellRendererFramework: ListRenderer,
-      maxWidth: 350
-    }
   ],
   items: [
     {
@@ -666,6 +666,515 @@ export const muscles = {
       actions: [
         "laterally rotates extended thigh",
         "abducts flexed thigh",
+      ]
+    },
+    {
+      name: ["lumbricals"], 
+      group: ["foot"],
+      origin: [
+        "tendons of flexor digitorum longus",
+      ],
+      insertion: [
+        "medial side of dorsal digital expansions of lateral four digits",
+      ],
+      innervation: [
+        "medial one: medial plantar nerve",
+        "lateral three: lateral plantar nerve",
+      ],
+      bloodSupply: [
+        "lateral plantar artery",
+        "plantar metatarsal arteries",
+      ],
+      actions: [
+        "flexes proximal phalangeal bones at metatarsophalangeal joint", 
+        "extends phalangeal bones at proximal interphalangeal",
+        "extends phalangeal bones at distal interphalangeal joints",
+      ]
+    },
+    {
+      name: ["obturator externus"], 
+      group: ["medial thigh"],
+      origin: [
+        "margins of obturator foramen", 
+        "obturator membrane",
+      ],
+      insertion: [
+        "trochanteric fossa of femur",
+      ],
+      innervation: [
+        "obturator nerve",
+      ],
+      bloodSupply: [
+        "medial circumflex femoral artery",
+        "obturator artery",
+      ],
+      actions: [
+        "laterally rotates thigh",
+        "stabilizes head of femur in acetabulum",
+      ]
+    },
+    {
+      name: ["obturator internus"], 
+      group: ["gluteal region"],
+      origin: [
+        "pelvic surface of obturator membrane and surrounding bone",
+      ],
+      insertion: [
+        "medial surface of greater trochanter of femur",
+      ],
+      innervation: [
+        "nerve to obturator internus muscle",
+      ],
+      bloodSupply: [
+        "internal pudendal artery",
+        "obturator artery",
+      ],
+      actions: [
+        "laterally rotates extended thigh", 
+        "abducts flexed thigh at hip",
+      ]
+    },
+    {
+      name: ["pectineus"], 
+      group: ["medial thigh"],
+      origin: [
+        "superior ramus of pubis",
+      ],
+      insertion: [
+        "pectineal line of femur",
+      ],
+      innervation: [
+        "femoral nerve",
+        "sometimes obturator nerve",
+      ],
+      bloodSupply: [
+        "medial circumflex femoral artery",
+        "obturator artery",
+      ],
+      actions: [
+        "adducts thigh at hip",
+        "flexes thigh at hip",
+      ]
+    },
+    {
+      name: ["piriformis"], 
+      group: ["gluteal region"],
+      origin: [
+        "anterior surface of sacral segments 2-4",
+        "sacrotuberous ligament (inconstant)"
+      ],
+      insertion: [
+        "superior body of the greater trochanter of femur",
+      ],
+      innervation: [
+        "ventral rami of L5, S1, S2",
+      ],
+      bloodSupply: [
+        "superior gluteal artery",
+        "inferior gluteal artery",
+        "internal pudendal artery",
+      ],
+      actions: [
+        "laterally rotates extended thigh", 
+        "abducts flexed thigh at hip",
+      ]
+    },
+    {
+      name: ["plantar interossei (three muscles)"], 
+      group: ["foot"],
+      origin: [
+        "bases and medial sides of 3rd through 5th metatarsals",
+      ],
+      insertion: [
+        "medial sides of bases of proximal phalangeal bones of 3rd through 5th digits",
+      ],
+      innervation: [
+        "lateral plantar nerve",
+      ],
+      bloodSupply: [
+        "lateral plantar artery",
+        "lateral plantar arch",
+        "plantar metatarsal artery",
+        "plantar digital artery",
+      ],
+      actions: [
+        "adduct digits (3-5)",
+        "flex metatarsophalangeal joint",
+        "extend phalangeal bones",
+      ]
+    },
+    {
+      name: ["plantaris"], 
+      group: ["posterior leg"],
+      origin: [
+        "inferior end of lateral supracondylar line of femur",
+        "oblique popliteal ligament",
+      ],
+      insertion: [
+        "posterior aspect of calcaneus via calcaneal tendon",
+      ],
+      innervation: [
+        "tibial nerve",
+      ],
+      bloodSupply: [
+        "popliteal artery",
+      ],
+      actions: [
+        "weakly assists gastrocnemius",
+      ]
+    },
+    {
+      name: ["popliteus"], 
+      group: ["posterior leg"],
+      origin: [
+        "lateral aspect of lateral condyle of femur", 
+        "lateral meniscus",
+      ],
+      insertion: [
+        "posterior tibia superior to soleal line",
+      ],
+      innervation: [
+        "tibial nerve (L4–S1)",
+      ],
+      bloodSupply: [
+        "inferior medial artyer",
+        "lateral genicular artery",
+      ],
+      actions: [
+        "weakly flexes knee",
+        "unlocks knee by rotating femur on fixed tibia",
+      ]
+    },
+    {
+      name: ["psoas major (iliopsoas)"], 
+      group: ["anterior thigh"],
+      origin: [
+        "transverse processes of lumbar vertebrae",
+        "sides of bodies of T12–L5 vertebrae",
+        "intervening intervertebral discs",
+      ],
+      insertion: [
+        "lesser trochanter of femur",
+      ],
+      innervation: [
+        "anterior rami of first three lumbar nerves",
+      ],
+      bloodSupply: [
+        "lumbar branches of iliolumbar artery",
+      ],
+      actions: [
+        "acting superiorly with iliacus, flexes hip", 
+        "acting inferiorly, flexes vertebral column laterally",
+        "used to balance trunk in sitting position",
+        "acting inferiorly with iliacus, flexes trunk",
+      ]
+    },
+    {
+      name: ["quadratus femoris"], 
+      group: ["gluteal region"],
+      origin: [
+        "lateral margin of ischial tuberosity",
+      ],
+      insertion: [
+        "quadrate tubercle on intertrochanteric crest of femur",
+      ],
+      innervation: [
+        "nerve to quadratus femoris muscle",
+      ],
+      bloodSupply: [
+        "medial circumflex femoral artery",
+      ],
+      actions: [
+        "laterally rotates thigh at hip",
+      ]
+    },
+    {
+      name: ["quadratus plantae"], 
+      group: ["foot"],
+      origin: [
+        "medial sides of plantar surface of calcaneus",
+        "lateral sides of plantar surface of calcaneus",
+      ],
+      insertion: [
+        "posterolateral edge of flexor digitorum longus tendon",
+      ],
+      innervation: [
+        "lateral plantar nerve",
+      ],
+      bloodSupply: [
+        "medial plantar artery",
+        "lateral plantar artery",
+        "deep plantar arterial arch",
+      ],
+      actions: [
+        "Corrects for oblique pull of flexor digitorum longus tendon, thus assisting in flexion of digits of foot",
+      ]
+    },
+    {
+      name: ["rectus femoris (quadriceps)"], 
+      group: ["anterior thigh"],
+      origin: [
+        "anterior inferior iliac spine",
+        "ilium superior to acetabulum",
+      ],
+      insertion: [
+        "base of patella",
+        "tibial tuberosity via patellar ligament",
+      ],
+      innervation: [
+        "femoral nerve",
+      ],
+      bloodSupply: [
+        "profunda femoris artery",
+        "lateral circumflex femoral artery",
+      ],
+      actions: [
+        "extends leg at knee joint",
+        "flexes thigh at hip joint",
+      ]
+    },
+    {
+      name: ["sartorius"], 
+      group: ["anterior thigh"],
+      origin: [
+        "anterior superior iliac spine",
+        "superior part of notch below it",
+      ],
+      insertion: [
+        "superior part of medial surface of tibia",
+      ],
+      innervation: [
+        "femoral nerve",
+      ],
+      bloodSupply: [
+        "femoral artery",
+      ],
+      actions: [
+        "abducts thigh",
+        "laterally rotates thigh", 
+        "flexes thigh",
+        "flexes knee joint",
+      ]
+    },
+    {
+      name: ["semimembranosus"], 
+      group: ["posterior thigh"],
+      origin: [
+        "ischial tuberosity",
+      ],
+      insertion: [
+        "posterior part of medial condyle of tibia",
+      ],
+      innervation: [
+        "sciatic nerve (tibial division)",
+      ],
+      bloodSupply: [
+        "perforating branch of profunda femoris artery",
+        "medial circumflex femoral arteries",
+      ],
+      actions: [
+        "flexes leg",
+        "extends thigh",
+      ]
+    },
+    {
+      name: ["semitendinosus"], 
+      group: ["posterior thigh"],
+      origin: [
+        "ischial tuberosity",
+      ],
+      insertion: [
+        "superior part of medial surface of tibia",
+      ],
+      innervation: [
+        "sciatic nerve (tibial division)",
+      ],
+      bloodSupply: [
+        "perforating branch of profunda femoris artery",
+        "medial circumflex femoral artery",
+      ],
+      actions: [
+        "flexes leg", 
+        "extends thigh",
+      ]
+    },
+    {
+      name: ["soleus"], 
+      group: ["posterior leg"],
+      origin: [
+        "posterior aspect of head of fibula",
+        "proximal 1/4 of posterior surface of fibula", 
+        "soleal line of tibia",
+      ],
+      insertion: [
+        "posterior aspect of calcaneus via calcaneal tendon",
+      ],
+      innervation: [
+        "tibial nerve",
+      ],
+      bloodSupply: [
+        "popliteal artery", 
+        "posterior tibial artery", 
+        "fibular artery",
+      ],
+      actions: [
+        "plantarflexes foot at ankle", 
+        "stabilizes leg over foot",
+      ]
+    },
+    {
+      name: ["superior gemellus"], 
+      group: ["gluteal region"],
+      origin: [
+        "outer surface of ischial spine",
+      ],
+      insertion: [
+        "medial surface of greater trochanter of femur",
+      ],
+      innervation: [
+        "nerve to obturator internus muscle",
+      ],
+      bloodSupply: [
+        "inferior gluteal artery",
+        "internal pudendal artery",
+      ],
+      actions: [
+        "laterally rotates extended thigh",
+        "abducts flexed thigh",
+      ]
+    },
+    {
+      name: ["tensor fasciae latae"], 
+      group: ["gluteal region"],
+      origin: [
+        "anterior superior iliac spine and anterior part of iliac crest",
+      ],
+      insertion: [
+        "iliotibial tract that attaches to lateral condyle of tibia",
+      ],
+      innervation: [
+        "superior gluteal nerve",
+      ],
+      bloodSupply: [
+        "ascending branch of lateral circumflex femoral artery",
+      ],
+      actions: [
+        "abducts thigh at hip",
+        "medially rotates thigh at hip",
+        "flexes thigh at hip",
+        "helps to keep knee extended",
+      ]
+    },
+    {
+      name: ["tibialis anterior"], 
+      group: ["anterior leg"],
+      origin: [
+        "lateral condyle", 
+        "proximal half of lateral tibia",
+        "interosseous membrane",
+      ],
+      insertion: [
+        "medial plantar surfaces of medial cuneiform bone",
+        "base of 1st metatarsal bone",
+      ],
+      innervation: [
+        "deep fibular nerve",
+      ],
+      bloodSupply: [
+        "anterior tibial artery",
+      ],
+      actions: [
+        "dorsiflexes foot at ankle",
+        "inverts foot",
+      ]
+    },
+    {
+      name: ["tibialis posterior"], 
+      group: ["posterior leg"],
+      origin: [
+        "posterior tibia below soleal line",
+        "interosseous membrane",
+        "proximal half of posterior fibula",
+      ],
+      insertion: [
+        "tuberosity of navicular bone", 
+        "all cuneiforms, cuboid, and bases of 2nd through 4th metatarsal bones",
+      ],
+      innervation: [
+        "tibial nerve",
+      ],
+      bloodSupply: [
+        "fibular artery",
+      ],
+      actions: [
+        "plantarflexes foot at ankle",
+        "inverts foot",
+      ]
+    },
+    {
+      name: ["vastus intermedius (quadriceps)"], 
+      group: ["anterior thigh"],
+      origin: [
+        "anterior surface of body of femur",
+        "lateral surface of body of femur",
+      ],
+      insertion: [
+        "base of patella",
+        "tibial tuberosity via patellar ligament",
+      ],
+      innervation: [
+        "femoral nerve",
+      ],
+      bloodSupply: [
+        "lateral circumflex femoral artery",
+        "profunda femoris artery",
+      ],
+      actions: [
+        "extends leg at knee joint",
+      ]
+    },
+    {
+      name: ["vastus lateralis (quadriceps)"], 
+      group: ["anterior thigh"],
+      origin: [
+        "greater trochanter, lateral lip of gluteal tuberosity", 
+        "lateral lip of linea aspera",
+      ],
+      insertion: [
+        "base of patella",
+        "tibial tuberosity via patellar ligament",
+      ],
+      innervation: [
+        "femoral nerve",
+      ],
+      bloodSupply: [
+        "lateral circumflex femoral artery",
+        "profunda femoris artery",
+      ],
+      actions: [
+        "extends leg at knee joint",
+      ]
+    },
+    {
+      name: ["vastus medialis (quadriceps)"], 
+      group: ["anterior thigh"],
+      origin: [
+        "intertrochanteric line, greater trochanter, lateral lip of gluteal tuberosity", 
+        "lateral lip of linea aspera",
+      ],
+      insertion: [
+        "base of patella",
+        "tibial tuberosity via patellar ligament",
+      ],
+      innervation: [
+        "femoral nerve",
+      ],
+      bloodSupply: [
+        "femoral artery",
+        "profunda femoris artery",
+      ],
+      actions: [
+        "extends leg at knee joint",
       ]
     },
   ]
