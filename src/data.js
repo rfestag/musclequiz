@@ -117,12 +117,11 @@ export const muscles = {
         "obturator nerve"
       ],
       bloodSupply: [
-        "profunda femoris",
-        "medial circumflex femoral",
-        "obturator arteries",
+        "obturator artery"
       ],
       actions: [
-        "adducts thigh at hip",
+        "adducts thigh at hip", 
+        "medially rotates thigh",
         "weak hip flexor",
       ]
     },
@@ -137,7 +136,7 @@ export const muscles = {
         "tendons of both heads lateral to side of base of proximal phalanx of 1st digit"
       ],
       innervation: [
-        "deep branch of lateral plantar nerve"
+        "lateral plantar nerve"
       ],
       bloodSupply: [
         "medial plantar arteries",
@@ -164,11 +163,11 @@ export const muscles = {
         "obturator nerve (anterior division)"
       ],
       bloodSupply: [
-        "Profunda femoris artery",
-        "medial circumflex femoral artery",
+        "obturator artery"
       ],
       actions: [
-        "adducts thigh at hip"
+        "adducts thigh",
+        "medially rotates thigh"
       ]
     },
     {
@@ -185,16 +184,14 @@ export const muscles = {
         "medial supracondylar line"
       ],
       innervation: [
-        "adductor part: obturator nerve",
-        "hamstring part: sciatic nerve (tibial division)"
+        "obturator nerve",
+        "sciatic nerve"
       ],
       bloodSupply: [
-        "femoral artery",
-        "profunda femoris",
-        "obturator arteries"
+        "obturator artery"
       ],
       actions: [
-        "adductor part: adducts thigh",
+        "adducts thigh",
         "adductor part: flexes thigh",
         "hamstring part: extends thigh",
       ]
@@ -230,13 +227,11 @@ export const muscles = {
         "lateral side of head of fibula"
       ],
       innervation: [
-        "long head: sciatic nerve (tibial division) (L5–S2)",
+        "long head: sciatic nerve (tibial division)",
         "short head: sciatic nerve (common fibular division)"
       ],
       bloodSupply: [
         "perforating branches of profunda femoris", 
-        "inferior gluteal artery",
-        "medial circumflex femoral artery"
       ],
       actions: [
         "flexes leg",
@@ -523,7 +518,6 @@ export const muscles = {
         "tibial nerve",
       ],
       bloodSupply: [
-        "popliteal tibial artery",
         "posterior tibial artery",
       ],
       actions: [
@@ -590,8 +584,7 @@ export const muscles = {
         "superior gluteal nerve",
       ],
       bloodSupply: [
-        "main trunk of superior gluteal artery",
-        "deep branch of superior gluteal artery",
+        "superior gluteal artery",
       ],
       actions: [
         "abducts thigh at hips",
@@ -613,8 +606,7 @@ export const muscles = {
         "obturator nerve",
       ],
       bloodSupply: [
-        "Profunda femoris artery", 
-        "medial circumflex femoral artery",
+        "obturator artery", 
       ],
       actions: [
         "adducts thigh", 
@@ -664,8 +656,7 @@ export const muscles = {
         "medial circumflex femoral artery",
       ],
       actions: [
-        "laterally rotates extended thigh",
-        "abducts flexed thigh",
+        "laterally rotates hip",
       ]
     },
     {
@@ -705,12 +696,10 @@ export const muscles = {
         "obturator nerve",
       ],
       bloodSupply: [
-        "medial circumflex femoral artery",
         "obturator artery",
       ],
       actions: [
         "laterally rotates thigh",
-        "stabilizes head of femur in acetabulum",
       ]
     },
     {
@@ -730,8 +719,7 @@ export const muscles = {
         "obturator artery",
       ],
       actions: [
-        "laterally rotates extended thigh", 
-        "abducts flexed thigh at hip",
+        "laterally rotates thigh", 
       ]
     },
     {
@@ -745,10 +733,8 @@ export const muscles = {
       ],
       innervation: [
         "femoral nerve",
-        "sometimes obturator nerve",
       ],
       bloodSupply: [
-        "medial circumflex femoral artery",
         "obturator artery",
       ],
       actions: [
@@ -837,8 +823,7 @@ export const muscles = {
         "tibial nerve (L4–S1)",
       ],
       bloodSupply: [
-        "inferior medial artyer",
-        "lateral genicular artery",
+        "posterior tibial artery",
       ],
       actions: [
         "weakly flexes knee",
@@ -885,7 +870,7 @@ export const muscles = {
         "medial circumflex femoral artery",
       ],
       actions: [
-        "laterally rotates thigh at hip",
+        "laterally rotates thigh",
       ]
     },
     {
@@ -925,8 +910,7 @@ export const muscles = {
         "femoral nerve",
       ],
       bloodSupply: [
-        "profunda femoris artery",
-        "lateral circumflex femoral artery",
+        "femoral artery",
       ],
       actions: [
         "extends leg at knee joint",
@@ -969,8 +953,7 @@ export const muscles = {
         "sciatic nerve (tibial division)",
       ],
       bloodSupply: [
-        "perforating branch of profunda femoris artery",
-        "medial circumflex femoral arteries",
+        "profunda femoris artery",
       ],
       actions: [
         "flexes leg",
@@ -990,8 +973,7 @@ export const muscles = {
         "sciatic nerve (tibial division)",
       ],
       bloodSupply: [
-        "perforating branch of profunda femoris artery",
-        "medial circumflex femoral artery",
+        "profunda femoris artery",
       ],
       actions: [
         "flexes leg", 
@@ -1013,9 +995,7 @@ export const muscles = {
         "tibial nerve",
       ],
       bloodSupply: [
-        "popliteal artery", 
         "posterior tibial artery", 
-        "fibular artery",
       ],
       actions: [
         "plantarflexes foot at ankle", 
@@ -1104,7 +1084,7 @@ export const muscles = {
         "tibial nerve",
       ],
       bloodSupply: [
-        "fibular artery",
+        "posterior fibular artery",
       ],
       actions: [
         "plantarflexes foot at ankle",
@@ -1126,8 +1106,7 @@ export const muscles = {
         "femoral nerve",
       ],
       bloodSupply: [
-        "lateral circumflex femoral artery",
-        "profunda femoris artery",
+        "femoral artery",
       ],
       actions: [
         "extends leg at knee joint",
@@ -1148,8 +1127,7 @@ export const muscles = {
         "femoral nerve",
       ],
       bloodSupply: [
-        "lateral circumflex femoral artery",
-        "profunda femoris artery",
+        "femoral artery",
       ],
       actions: [
         "extends leg at knee joint",
@@ -1171,7 +1149,6 @@ export const muscles = {
       ],
       bloodSupply: [
         "femoral artery",
-        "profunda femoris artery",
       ],
       actions: [
         "extends leg at knee joint",
