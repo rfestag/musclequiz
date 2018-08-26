@@ -21,6 +21,7 @@ export const columns = [
     field: "innervation",
     cellEditorFramework: ListEditor,
     cellRendererFramework: ListRenderer,
+    autoHeight: true,
     maxWidth: 350
   },
   {
@@ -36,6 +37,7 @@ export const columns = [
     field: "bloodSupply",
     cellEditorFramework: ListEditor,
     cellRendererFramework: ListRenderer,
+    autoHeight: true,
     maxWidth: 350
   },
   {
@@ -51,6 +53,7 @@ export const columns = [
     field: "insertion",
     cellEditorFramework: ListEditor,
     cellRendererFramework: ListRenderer,
+    autoHeight: true,
     maxWidth: 350
   },
 ]
