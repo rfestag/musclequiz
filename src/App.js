@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { muscles } from './data';
+import { columns } from './columns';
+import { upper } from './upper';
+import { lower } from './lower';
 
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid/dist/styles/ag-grid.css';
@@ -11,6 +13,7 @@ import Select from 'react-select'
 import _ from 'lodash';
 import FuzzySet from 'fuzzyset';
 
+const muscleSets = {upper, lower}
 const styleEditable = (params) => {
   if (params.colDef.editable) {
     return {fontWeight: 600}
@@ -61,37 +64,54 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    let columnDefs = muscles.columns.map(c => ({...c, autoHeight: true, cellStyle: styleEditable}))
-    let rowData = JSON.parse(JSON.stringify(muscles.items)) //Deep clone
+    let columnDefs = columns.map(c => ({...c, cellStyle: styleEditable}))
 
+    let muscleSets = [
+      { value: 'lower', label: "Lower Limbs" },
+      { value: 'upper', label: "Upper Limbs" }
+    ]
     let types = [
       { value: 'columns', label: "Hide Columns" },
       { value: 'random', label: "Hide Random Entries" }
     ]
-    let groups = Object.keys(muscles.items.map(m => m.group[0]).reduce((groups, g) => {
+
+    let columnOptions = columnDefs.map(({field, headerName}) => ({value: field, label: headerName}))
+
+    let muscleSet = undefined
+    let type = types[0]
+    let hiddenColumns = []
+    //let groupsToInclude = groups
+    let inQuiz = false
+
+    this.state = {
+      //muscles,
+      muscleSets,
+      muscleSet,
+      columnDefs,
+      columnOptions,
+      hiddenColumns,
+      //groups,
+      //groupsToInclude,
+      inQuiz,
+      //rowData,
+      types,
+      type
+    }
+  }
+  componentDidMount() {
+    this.setMuscles(this.state.muscleSets[0])
+  }
+  setMuscles = (muscleSet) => {
+    const muscles = muscleSets[muscleSet.value]
+    let groups = Object.keys(muscles.map(m => m.group[0]).reduce((groups, g) => {
       groups[g] = true
       return groups
     }, {}))
     groups = groups.map(value => ({value, label: value.replace(/^\w/, c => c.toUpperCase())}))
+    let groupsToInclude = groups.slice()
+    let rowData = JSON.parse(JSON.stringify(muscles)) //Deep clone
 
-    let columnOptions = columnDefs.map(({field, headerName}) => ({value: field, label: headerName}))
-
-    let type = types[0]
-    let hiddenColumns = []
-    let groupsToInclude = groups
-    let inQuiz = false
-
-    this.state = {
-      columnDefs,
-      columnOptions,
-      hiddenColumns,
-      groups,
-      groupsToInclude,
-      inQuiz,
-      rowData,
-      types,
-      type
-    }
+    this.setState({muscles, muscleSet, rowData, groups, groupsToInclude})
   }
   setType = (type) => {
     this.setState({ type })
@@ -100,16 +120,16 @@ class App extends Component {
     this.setState({ hiddenColumns });
   }
   setGroupsToInclude = (groupsToInclude) => {
-    let rowData = filteredItems(muscles.items, groupsToInclude)
+    let rowData = filteredItems(this.state.muscles, groupsToInclude)
     this.setState({ groupsToInclude, rowData });
   }
   resetData = () => {
-    let columnDefs = muscles.columns.map(c => {
+    let columnDefs = columns.map(c => {
       const idx = this.state.hiddenColumns.findIndex(({value}) => value === c.field)
       if (idx >= 0) return {...c, editable: true, autoHeight: true, cellStyle: styleEditable}
       else return {...c, autoHeight: true, cellStyle: styleEditable}
     })
-    let musclesClone = JSON.parse(JSON.stringify(muscles.items)) //Deep clone
+    let musclesClone = JSON.parse(JSON.stringify(this.state.muscles)) //Deep clone
     let rowData = filteredItems(musclesClone, this.state.groupsToInclude)
     if (this.state.type.value === 'columns') {
       const fields = this.state.hiddenColumns.map(({value}) => value)
@@ -142,8 +162,8 @@ class App extends Component {
     setTimeout(() => params.api.resetRowHeights())
   }
   validate = () => {
-    const answerKey = createAnswerKey(filteredItems(muscles.items, this.state.groupsToInclude))
-    const columnDefs = muscles.columns.map(c => ({...c, autoHeight: true, cellStyle: styleEditable}))
+    const answerKey = createAnswerKey(filteredItems(this.state.muscles, this.state.groupsToInclude))
+    const columnDefs = columns.map(c => ({...c, autoHeight: true, cellStyle: styleEditable}))
     const copy = this.state.rowData.map(i => i)
     copy.sort((a,b) => a.origIndex - b.origIndex)
     const answers = normalize(copy)
@@ -179,6 +199,11 @@ class App extends Component {
     return (
       <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}>
         <Form inline>
+          <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px', paddingRight: 0}}>
+            <div style={{display: 'block', width: '200px'}}>
+              <Select options={this.state.muscleSets} value={this.state.muscleSet} onChange={this.setMuscles}/>
+            </div>
+          </FormGroup>
           { false && 
             (
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px', paddingRight: 0}}>
@@ -191,7 +216,7 @@ class App extends Component {
           { this.state.type.value === 'columns' && 
             (
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0" style={{padding: '10px'}}>
-                <div style={{display: 'block', width: '600px'}}>
+                <div style={{display: 'block', width: '500px'}}>
                   <Select options={this.state.columnOptions} value={this.state.hiddenColumns} onChange={this.setHiddenColumns} isMulti={true} placeholder="Select Columns to Hide..."/>
                 </div>
               </FormGroup>
