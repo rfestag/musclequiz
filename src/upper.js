@@ -1,6 +1,3 @@
-import ListEditor from './components/ListEditor';
-import ListRenderer from './components/ListRenderer';
-
 export const upper = [
   {
     name: ["abductor digiti minimi"], 

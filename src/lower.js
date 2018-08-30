@@ -1,6 +1,3 @@
-import ListEditor from './components/ListEditor';
-import ListRenderer from './components/ListRenderer';
-
 export const lower = [
   {
     name: ["abductor digiti minimi"], 
@@ -108,7 +105,7 @@ export const lower = [
       "middle third of linea aspera of femur"
     ],
     innervation: [
-      "obturator nerve (anterior division)"
+      "obturator nerve"
     ],
     bloodSupply: [
       "obturator artery"
@@ -1085,8 +1082,8 @@ export const lower = [
     name: ["vastus medialis (quadriceps)"], 
     group: ["anterior thigh"],
     origin: [
-      "intertrochanteric line, greater trochanter, lateral lip of gluteal tuberosity", 
-      "lateral lip of linea aspera",
+      "lateral lip of gluteal tuberosity", 
+      "medial lip of linea aspera",
     ],
     insertion: [
       "base of patella",

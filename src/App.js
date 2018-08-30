@@ -22,15 +22,13 @@ const styleEditable = (params) => {
   return null
 }
 const tokenize = (str) => {
-  console.log("Tokenizing", str)
-  return _.chain(str.split(/\s+/))
+  return _.chain(str.split(/[\s\-:().,]+/))
           .map(t => t.toLowerCase())
-          .reject(t => ['', 'of', 'and', 'the', 'at', 'through'].includes(t))
+          .reject(t => ['', 'of', 'and', 'the', 'at', 'through', 'via'].includes(t))
           .join(' ')
           .value()
 }
 const normalize = (items) => {
-  console.log("Normalizing", items)
   return items.map(item => {
     return _.reduce(item, (item, v, k) => {
       if (k === 'origIndex') return item
